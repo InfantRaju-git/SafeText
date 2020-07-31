@@ -1,7 +1,7 @@
 {
   "name": "safetext",
   "version": "1.0.0",
-  "description": "Simple encryption and decryption app",
+  "description": "\"appliaction API\"",
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
@@ -9,7 +9,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "test": "node app.js"
   },
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfantRaju-git/SafeText.git"
+  },
+  "author": "Infant Raju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InfantRaju-git/SafeText/issues"
+  },
+ 
 }
