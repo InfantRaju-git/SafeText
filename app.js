@@ -2,7 +2,7 @@ const express=require('express')
 var operator=require('./encrypt_decrypt.js')
 const app=express()
 
-app.listen(9000,function (req,res)
+app.listen(process.env.PORT || 3000,function (req,res)
 {
 console.log("Running...")
 });
