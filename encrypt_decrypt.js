@@ -6,10 +6,11 @@ function encrypt(data,key){
     for(i=0;i<data.length;i++){
         coded.push(data.charCodeAt(i)-key)
     }
-    // for(i=0;i<coded.length;i++){console.log(coded[i])}
+    for(i=0;i<coded.length;i++){console.log(coded[i])}
     var tobesend=""
     for(i=coded.length-1;i>=0;i--){
         if(coded[i]==47){coded[i]+=1}
+        if(coded[i]==63){coded[i]-=1}
         tobesend+=String.fromCharCode(coded[i])
     }
     var msg={"status":"Success","message":tobesend,"key":key}
@@ -23,13 +24,14 @@ function decrypt(data,key){
     op=[]
     key=parseInt(key)
     for(i=data.length-1;i>=0;i--){
-        op.push(data.charCodeAt(i)+key)
+        if(data.charCodeAt(i)==48){op.push(((data.charCodeAt(i)-1)+key))}
+        if(data.charCodeAt(i)==62){op.push(((data.charCodeAt(i)+1)+key))}
+        else{op.push(data.charCodeAt(i)+key)}
     }
-    // for(i=0;i<op.length;i++){console.log(op[i])}
+    for(i=0;i<op.length;i++){console.log(op[i])}
 
     var output=""
     for(i=0;i<op.length;i++){
-        if(op[i]==47){op[i]+=1}
         output+=String.fromCharCode(op[i])
     }
     output=output.toLowerCase()

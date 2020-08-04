@@ -8,7 +8,7 @@ console.log("Running...")
 });
 
 app.get('/',function(req,res){
-    res.send("<html><center><body><h1>SafeText API Documentation</h1><hr><p>Usage=> http://appname.com/encrypt(or)decrypt/placeyour<b>to_be_encrypted_message(or)to_be_decrypted_message</b>here/placeyour<b>key</b>here</p><p><u>Note:</u> key can take any value between 32-500</p><p><b>Happy Encryption !</b></p></body></center></html>")
+    res.send("<html><center><body><h1>SafeText API Documentation</h1><hr><p>Usage for Encryption : https://safetextapi.herokuapp.com/encrypt/<code>place your message</code>/<b>key</b></p><p>Usage for Decryption : https://safetextapi.herokuapp.com/decrypt/<code>place your encrypted message</code>/<b>key</b></p><u>Note:</u> key can take any value between 1-500</p><p><b>Happy Encryption !</b></p></body></center></html>")
 });
 
 app.get('/encrypt/:data/:key',function(req,res){
